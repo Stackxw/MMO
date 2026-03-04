@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="icon"
+        href="data:;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAuSURBVADtlNERACAIArf8Ym5hZ0LPoIE/uIA0O4cIKNAdCHIAAsMEOQCB7mD5B68A6HMCe60OqEAAAAAASUVORK5CYII=">
+    <title>云端音乐 - 登录</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="logo">云端音乐</div>
+
+        <div class="error-msg" id="error-msg"></div>
+
+        <div id="login-form">
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <span class="input-icon">👤</span>
+                    <input type="text" id="username" placeholder="输入用户名">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <span class="input-icon">🔒</span>
+                    <input type="password" id="password" placeholder="输入访问密码">
+                </div>
+            </div>
+            <div style="display: flex; align-items: center; margin-top: 15px; font-size: 13px; color: #666;">
+                <input type="checkbox" id="remember-me" checked style="margin-right: 6px; accent-color: #1ecf9f;">
+                <label for="remember-me" style="cursor: pointer;">记住账号</label>
+            </div>
+            <button class="btn-primary" id="login-btn">登录</button>
+            <div class="footer-links">
+                <a id="go-forgot-password" style="color: #888;">忘记密码?</a>
+                <span style="margin: 0 8px; color: #ddd;">|</span>
+                暂未开放注册 <a id="go-register" style="display:none;">立即注册</a>
+            </div>
+        </div>
+
+        <div id="register-form" style="display: none;">
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <span class="input-icon">👤</span>
+                    <input type="text" id="reg-username" placeholder="设置用户名">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <span class="input-icon">🔒</span>
+                    <input type="password" id="reg-password" placeholder="设置访问密码">
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <span class="input-icon">🔒</span>
+                    <input type="password" id="reg-password-confirm" placeholder="确认访问密码">
+                </div>
+            </div>
+            <button class="btn-primary" id="register-btn">注册</button>
+            <div class="footer-links">
+                已有账号? <a id="go-login">立即登录</a>
+            </div>
+        </div>
+
+        <!-- Forgot Password Form -->
+        <div id="forgot-password-form" style="display: none;">
+            <div class="form-group">
+                <div class="input-wrapper">
+                    <span class="input-icon">👤</span>
+                    <input type="text" id="forgot-username" placeholder="请输入用户名">
+                </div>
+            </div>
+            <button class="btn-primary btn-secondary" id="check-user-btn">验证账号</button>
+
+            <div id="reset-password-section" style="display: none; margin-top: 20px;">
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <span class="input-icon">🔐</span>
+                        <input type="password" id="new-password" placeholder="输入新密码">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-wrapper">
+                        <span class="input-icon">🔐</span>
+                        <input type="password" id="confirm-new-password" placeholder="确认新密码">
+                    </div>
+                </div>
+                <button class="btn-primary" id="reset-password-btn">重置密码</button>
+            </div>
+            <div class="footer-links">
+                <a id="go-login-from-forgot">返回登录</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/service.js"></script>
+    <script src="js/login.js"></script>
+</body>
+
+</html>
